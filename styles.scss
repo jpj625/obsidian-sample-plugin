@@ -1,0 +1,58 @@
+.kankonnector-settings {
+	.checkbox-container {
+		&, & input[type=checkbox] {
+			cursor: pointer;
+		}
+	}
+
+	.checkbox-container.is-disabled,
+	button[disabled] {
+		opacity: 0.4;
+		&, & input[type=checkbox] {
+			cursor: default;
+		}
+	}
+
+	.folder-table {
+		.setting-item-info {
+			display: contents;
+		}
+
+		.setting-item-name {
+			font-size: 0.8em;
+		}
+	}
+
+	.campaign-folder input {
+		width: 16rem;
+	}
+
+	.campaign-id input {
+		width: 6rem;
+	}
+
+}
+
+.info-link {
+	zoom: 0.6;
+	vertical-align: super;
+	margin-left: 6px;
+
+	border: 1px silver outset;
+	border-radius: 4px;
+
+	opacity: 69%;
+	background: none;
+	text-decoration: none;
+
+	cursor: pointer;
+
+	&[href]:hover {
+		opacity: 100%;
+		color: var(--link-color-hover);
+	}
+
+	&:not([href]) {
+		cursor: help;
+	}
+}

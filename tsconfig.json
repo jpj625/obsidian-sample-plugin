@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "esModuleInterop": true,
     "inlineSourceMap": true,
     "inlineSources": true,
     "module": "ESNext",
@@ -19,6 +20,7 @@
     ]
   },
   "include": [
-    "**/*.ts"
+    "**/*.ts",
+    "utils/*.ts"
   ]
 }

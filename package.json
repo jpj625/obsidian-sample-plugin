@@ -1,24 +1,38 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "kankonnector",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "put obsidian in kanka",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"build": "sass styles.scss styles.css && tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^16.11.6",
+		"@types/markdown-it": "^12.2.3",
+		"@types/node": "18.16",
+		"@types/showdown": "^2.0.1",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
 		"@typescript-eslint/parser": "5.29.0",
+		"autoprefixer": "^10.4.14",
 		"builtin-modules": "3.3.0",
-		"esbuild": "0.17.3",
+		"esbuild": "^0.17.18",
+		"esbuild-sass-plugin": "^2.9.0",
 		"obsidian": "latest",
-		"tslib": "2.4.0",
-		"typescript": "4.7.4"
+		"postcss": "^8.4.23",
+		"tslib": "^2.5.0",
+		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.11.7",
+		"bottleneck": "^2.19.5",
+		"flavormark": "^1.1.3",
+		"markdown-it": "^13.0.1",
+		"minimatch": "^9.0.3",
+		"sass": "^1.62.1",
+		"showdown": "^2.1.0"
 	}
 }
